@@ -3,3 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.myBoard {
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  /* margin: 1em; */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 0px;
+}
+
+.myBoard-item {
+  border: 1px solid black;
+}

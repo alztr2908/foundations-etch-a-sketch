@@ -8,15 +8,13 @@ const BOARD_SIZE = 550; //width and height of myBoard element (css)
 myButton.addEventListener("click", () => {
   const newSquareNum = parseInt(prompt("New Board Size? (Limit: 100)"));
 
-  removeBoard();
   if (!isNaN(newSquareNum)) {
+    removeBoard();
     if (newSquareNum > 100) {
       SQUARE_NUM = 100;
     } else {
       SQUARE_NUM = newSquareNum;
     }
-    createBoard(SQUARE_NUM);
-  } else {
     createBoard(SQUARE_NUM);
   }
 

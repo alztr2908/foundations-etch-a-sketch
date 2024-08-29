@@ -32,7 +32,3 @@
 .myBoardItem {
   display: flex;
 }
-
-.myBoardItemChild {
-  border: 1px solid black;
-}

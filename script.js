@@ -16,6 +16,8 @@ myButton.addEventListener("click", () => {
       SQUARE_NUM = newSquareNum;
     }
     createBoard(SQUARE_NUM);
+  } else {
+    createBoard(SQUARE_NUM);
   }
 
   return;
@@ -28,9 +30,14 @@ const createBoard = (square) => {
     // Create square
     for (let j = 0; j < square; j++) {
       const myBoardItemChild = document.createElement("div");
-      myBoardItemChild.classList.add("myBoardItemChild");
       myBoardItemChild.style.height = `${BOARD_SIZE / square}px`;
       myBoardItemChild.style.width = `${BOARD_SIZE / square}px`;
+
+      // drawing logic
+      myBoardItemChild.addEventListener("mouseenter", () => {
+        myBoardItemChild.style.backgroundColor = "black";
+      });
+
       myBoardItem.appendChild(myBoardItemChild);
     }
 
